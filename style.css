@@ -1,0 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+
+  height: 100%;
+  font-weight: auto;
+}
+
+
+header {
+display: flex;
+align-items: center;
+
+height: 12.2rem; 
+padding: 0 7.2rem;
+}
+
+
+header nav{
+  display: flex;
+  justify-content: space-between;
+  width: 42.6rem;
+
+  margin-left: 3.27rem;
+
+  font-size: 2.4rem;
+  line-height: 2.17rem;
+}
+
+header nav a{
+color: #C4C4CC;
+font-weight: 400;
+text-decoration: none;
+
+transition: all 0.8s;
+}
+
+header nav a:hover{
+  transform: scale(1.1);
+}
+
+header nav a.active {
+  color: white;
+  font-weight: 700;
+}
+
+body {
+  background-image: url(./assents/bg/bg-Homee.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
