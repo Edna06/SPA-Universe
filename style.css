@@ -14,6 +14,7 @@ body {
 
   height: 100%;
   font-weight: auto;
+  overflow: hidden;
 }
 
 
@@ -49,13 +50,153 @@ header nav a:hover{
   transform: scale(1.1);
 }
 
-header nav a.active {
+.active {
   color: white;
   font-weight: 700;
 }
+
+/* configurando imagem de fundo*/
 
 body {
   background-image: url(./assents/bg/bg-Homee.svg);
   background-repeat: no-repeat;
   background-size: 100%;
+}
+
+
+body.universe{
+  background-image: url(./assents/bg/bg-universe.svg);
+}
+
+body.exploration{
+  background-image: url(./assents/bg/bg-exploration.svg);
+}
+
+body.error404 {
+background-image: url(./assents/bg/bg-404.gif);
+}
+
+/* configurando o main */
+
+main .home{
+margin-top: 13%;
+text-align: center;
+}
+
+h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 6rem;
+}
+
+main .home button {
+background-color: rgba(10, 10, 10, 0);
+border: 2px solid rgb(255, 255, 255);
+border-radius: .6rem;
+width: 19.5rem;
+height: 4.8rem;
+
+transition: all 0.6s;
+}
+
+main .home button.buttonExploration {
+  margin-top: 2.4rem;
+}
+
+main .home button:hover{
+  cursor: pointer;
+  transform: scale(0.9);
+}
+
+main .home button a,
+main .error404 button a{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: white;
+ text-decoration: none;
+}
+
+main .universe,
+main .exploration{
+  /* border: 1px solid red; */
+ 
+  width: 64.8rem;
+  margin-top: 7rem;
+  margin-left: 10.2rem;
+}
+
+p {
+  color: #E1E1E6;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 160%;
+}
+
+/* configurando página de erro */
+
+main .error404 {
+background-color: white;
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+
+display: flex;
+justify-content: center;
+}
+
+main .error404 img{
+  width: 70rem;
+  height: 60rem;
+  margin-top: 7%;
+}
+
+main .error404 .text-error{
+  text-align: center;
+  padding-top: 18%;
+
+  width: 44rem;
+}
+
+main .error404 h1 {
+  color:black;
+  text-shadow: rgb(244, 7, 7) -6px 0, cyan 6px 0;
+
+  margin-bottom: 2rem;
+}
+main .error404 h3{
+  color: rgba(85, 80, 80, 0.641);
+  font-weight: 400;
+
+  margin-bottom: 4rem;
+}
+
+main .error404 button {
+background-color: rgba(10, 10, 10, 0);
+border: 3px solid rgb(1, 1, 1);
+border-radius: .6rem;
+width: 20.5rem;
+height: 4.8rem;
+
+transition: all 0.6s; 
+}
+
+main .error404 button:hover {
+  transform: scale(1.1);
+  /* background-color: rgb(221, 166, 38); */
+  /* border: none; */
+  cursor:pointer;
+}
+
+main .error404 button a {
+  color:rgb(2, 3, 6)
+}
+
+main .error404 button:hover a {
+
+font-weight: 800;
 }

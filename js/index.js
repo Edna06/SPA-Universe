@@ -1,8 +1,31 @@
+import { homePage, explorationPage, universePage} from './navegation.js'
+import { home, exploration, universe} from './selectors.js'
+import { Router } from './routes.js'
 
-  function route(event) {
-    event = event || window.event
-    event.preventDefault()
+const router = new Router()
 
-  }
-  
-// const routes = new Routes()
+router.add('/home', './pages/home.html')
+router.add('/theUniverse', './pages/theUniverse.html')
+router.add('/exploration', './pages/exploration.html')
+router.add('404', './pages/error404.html')
+
+
+router.handle()
+
+home.addEventListener('click', () => {
+  homePage(), 
+  router.route()
+})
+exploration.addEventListener('click', () => {
+  explorationPage(), 
+  router.route()
+})
+universe.addEventListener('click', () => {
+  universePage(), 
+  router.route()
+})
+
+window.onpopstate = () => router.handle()
+
+window.route() = () => router.route()
+
